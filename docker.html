@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<div class="box"><b>Docker Compose</b><p>Manages multi-container apps.</p></div>
+</div>
+
+
+<h2>Dockerfile Example</h2>
+<pre>FROM python:3.11-slim
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+COPY . .
+CMD ["python","main.py"]</pre>
+
+
+<h2>Common Docker Commands</h2>
+<pre>docker build -t myapp .
+docker images
+docker run -d -p 8000:8000 myapp
+docker ps
+docker exec -it container_id bash
+docker stop container_id</pre>
+
+
+<h2>Docker vs Virtual Machine</h2>
+<div class="grid">
+<div class="box"><b>Docker</b><p>Lightweight, fast, shares host OS.</p></div>
+<div class="box"><b>VM</b><p>Heavy, slow, full OS per instance.</p></div>
+</div>
+
+
+<h2>Docker Use Cases</h2>
+<ul>
+<li>Microservices architecture</li>
+<li>CI/CD pipelines</li>
+<li>Local development environments</li>
+<li>Cloud-native applications</li>
+</ul>
+
+
+<h2>Docker in Real Projects</h2>
+<p>Typical setup:</p>
+<pre>Frontend (React)
+Backend (FastAPI)
+Database (PostgreSQL)
+Nginx (Reverse Proxy)</pre>
+
+
+<h2>Best Practices</h2>
+<ul>
+<li>Use small base images (alpine, slim)</li>
+<li>One process per container</li>
+<li>Never store secrets in images</li>
+<li>Use .dockerignore</li>
+</ul>
+
+
+<h2>Docker Interview Tips</h2>
+<ul>
+<li>Difference between image & container</li>
+<li>Docker vs Kubernetes</li>
+<li>Dockerfile vs Docker Compose</li>
+</ul>
+
+
+</main>
+<footer>Docker Notes • DevOps</footer>
+</body>
+</html>
